@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .car {
+        transition: all 1s linear;
+      }
+      #btn {
+        transition: all 6s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      width="200px"
+      src="https://static.vecteezy.com/system/resources/previews/001/193/929/original/vintage-car-png.png"
+      class="car"
+    />
+    <br />
+    <!-- <button id="btn">Change me</button> -->
+
+    <script>
+      let car = document.querySelector(".car");
+      let button = document.querySelector("#btn");
+      let count = 0;
+      window.addEventListener("keydown", () => {
+        count += 20;
+        car.style.transform = `translateX(${count}px)`;
+      });
+    </script>
+  </body>
+</html>
