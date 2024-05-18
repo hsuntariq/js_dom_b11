@@ -27,7 +27,7 @@
       let button = document.querySelector("#btn");
       let count = 0;
       window.addEventListener("keydown", () => {
-        count += 20;
+        count = count + 20;
         car.style.transform = `translateX(${count}px)`;
       });
     </script>
