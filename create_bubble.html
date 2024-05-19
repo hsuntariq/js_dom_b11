@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: red;
+        /* width: 50px;
+        height: 50px; */
+        border-radius: 50%;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let body = document.body;
+      let width = 0;
+      let height = 0;
+      window.addEventListener("mousemove", (e) => {
+        let xPos = e.clientX;
+        let yPos = e.clientY;
+        if (width > 100 || height > 100) {
+          width = 0;
+          height = 0;
+        }
+        width++;
+        height++;
+
+        let bubble = document.createElement("div");
+        body.appendChild(bubble);
+        bubble.style.left = `${xPos}px`;
+        bubble.style.top = `${yPos}px`;
+        bubble.style.width = `${width}px`;
+        bubble.style.height = `${height}px`;
+        setTimeout(() => {
+          body.removeChild(bubble);
+        }, 100);
+      });
+    </script>
+  </body>
+</html>

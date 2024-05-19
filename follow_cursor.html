@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+        padding: 0;
+        margin: 0;
+      }
+      .ball {
+        background-color: whitesmoke;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        filter: blur(10px);
+        position: absolute;
+        transition: all 0.4s;
+        animation: anim 0.6s linear infinite alternate;
+      }
+
+      @keyframes anim {
+        from {
+          border-radius: 10% 50% 30% 20%;
+          background-color: red;
+          /* rotate: 360deg; */
+        }
+        to {
+          border-radius: 40% 60% 10% 80%;
+          background-color: ble;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+
+    <script>
+      let ball = document.querySelector(".ball");
+      window.addEventListener("mousemove", (e) => {
+        let x = e.clientX;
+        let y = e.clientY;
+        ball.style.transform = `translate(${x - 60}px, ${y - 60}px)`;
+      });
+    </script>
+  </body>
+</html>
