@@ -1,0 +1,40 @@
+body {
+  background: linear-gradient(45deg, red, orange, blue);
+}
+.size,
+.color {
+  border-radius: 50%;
+  cursor: pointer;
+}
+.size1 {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.size2 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.size3 {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+}
+.size4 {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.canvas {
+  overflow: hidden;
+  height: 70vh;
+}
+
+.draw {
+  /* width: 20px;
+  height: 20px; */
+  background-color: red;
+  position: absolute;
+}

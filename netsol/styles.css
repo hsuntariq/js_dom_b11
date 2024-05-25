@@ -1,0 +1,81 @@
+body {
+  background-color: #15175a;
+  color: white;
+}
+
+.line {
+  width: 100%;
+  margin: 0.2rem 0;
+  height: 2px;
+  background-color: white;
+}
+
+.sidebar {
+  position: relative;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  transition: all 1.2s;
+  transform: translateX(-200%);
+  /* transform: translateX(0%); */
+  height: 100vh;
+  background: linear-gradient(135deg, #10111a, #131444, #171a85);
+  background-repeat: no-repeat;
+}
+
+.sidebar img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.menu {
+  z-index: 333;
+}
+
+.show {
+  transform: translateX(0);
+}
+
+.line {
+  transition: all 0.3s;
+}
+
+.toggle-line1 {
+  transform: translateY(5px) rotate(225deg);
+  width: 80%;
+  margin: auto;
+}
+.toggle-line2 {
+  opacity: 0;
+}
+
+.toggle-line3 {
+  transform: translateY(-5px) rotate(-225deg);
+  width: 80%;
+  margin: auto;
+}
+
+li {
+}
+
+.animate {
+  animation: move 0.9s;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(80px);
+
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
